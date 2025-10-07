@@ -64,7 +64,7 @@ Limpiar, transformar, cargar y analizar datos para generar insights significativ
 ### Top 10 highest fares / Top 10 boletos más caros
 ![Top 10 highest fares](Images/top10_fares.png)
 
-*(Include PNG screenshots in a folder called `/Images` for better presentation / Incluir capturas PNG en la carpeta `/Images` para mejor presentación)*
+
 
 ---
 
