@@ -56,10 +56,10 @@ Limpiar, transformar, cargar y analizar datos para generar insights significativ
 ## 📈 Visualizations / Visualizaciones
 
 ### Passengers per class / Pasajeros por clase
-![Passengers per class](Images/passengers_class.png)
+![Passengers per class](Images/passengers_per_class.png)
 
 ### Average age by gender / Edad promedio por género
-![Average age by gender](Images/average_age_gender.png)
+![Average age by gender](Images/avg_age_by_gender.png)
 
 ### Top 10 highest fares / Top 10 boletos más caros
 ![Top 10 highest fares](Images/top10_fares.png)
