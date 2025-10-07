@@ -1,89 +1,84 @@
-# 🚢 Titanic Data Engineering Project / Proyecto de Ingeniería de Datos – Titanic  
+Titanic Data Engineering Project / Proyecto de Ingeniería de Datos – Titanic
+📘 Overview / Descripción
 
----
+This project demonstrates a complete data engineering workflow using the Titanic dataset.
+Este proyecto muestra un flujo completo de ingeniería de datos usando el dataset del Titanic.
 
-## 🇬🇧 **English Version**
+Goal / Objetivo: Clean, transform, load, and analyze data to generate meaningful insights.
+Limpiar, transformar, cargar y analizar datos para generar insights significativos.
 
-### 📘 Project Overview  
-This project demonstrates a complete **data engineering workflow** using the Titanic dataset.  
-It includes **data cleaning, PostgreSQL database integration, SQL queries, and visual analysis** using **Python (pandas, psycopg2, matplotlib, seaborn)**.  
+🧩 Technologies Used / Tecnologías Utilizadas
 
----
+Database / Base de Datos: PostgreSQL
 
-### 🧩 Technologies Used  
-- **Database:** PostgreSQL  
-- **Python Libraries:** pandas, psycopg2, matplotlib, seaborn  
-- **Environment:** Jupyter Notebook  
-- **Dataset:** `test_clean.csv` (cleaned version of the original Titanic dataset)  
+Python Libraries / Librerías Python: pandas, numpy, matplotlib, seaborn, psycopg2
 
----
+Environment / Entorno de Trabajo: Jupyter Notebook
 
-### ⚙️ Project Workflow  
+Dataset: test.csv (raw) → test_clean.csv (cleaned)
 
-#### 1️⃣ Database Setup  
-- Database created: `titanic_db2`  
-- User: `mati_user`  
-- Table: `titanic`  
-- Columns:  PassengerId, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked, Title 
+⚙️ Project Workflow / Flujo del Proyecto
 
-#### 2️⃣ Data Cleaning  
-- Fixed encoding and formatting issues.  
-- Removed missing or inconsistent values.  
-- Verified data types for each column.  
-- Saved the cleaned version as `test_clean.csv`.  
+Data Cleaning / Limpieza de Datos
 
-#### 3️⃣ Data Insertion  
-- Connected Python to PostgreSQL using psycopg2.  
-- Inserted data row by row from the cleaned CSV file.  
-- Data is now ready for SQL analysis.  
+Handle missing values / Llenado de valores faltantes
 
-### 📊 SQL Queries & Insights  
+Standardize text / Estandarización de texto
 
-#### 🧮 Passengers per Class  
+Export clean CSV / Exportar CSV limpio
 
-SELECT Pclass, COUNT(*) AS num_passengers 
-FROM titanic 
-GROUP BY Pclass 
-ORDER BY Pclass;
+Database Integration / Integración con Base de Datos
 
+Connect Python to PostgreSQL / Conectar Python a PostgreSQL
 
-### Insight: Most passengers traveled in third class, showing a predominance of lower-income individuals.
+Create table with PRIMARY KEY / Crear tabla con PRIMARY KEY
 
+Insert data using psycopg2 / Insertar datos usando psycopg2
 
-👩‍🦱 ### Average Age by Gender
+SQL Queries & Insights / Consultas SQL e Insights
 
-SELECT Sex, AVG(Age) AS avg_age 
-FROM titanic 
-GROUP BY Sex;
+Count passengers per class / Contar pasajeros por clase
 
+Average age by gender / Edad promedio por género
 
-### Insight: The average age of female passengers was slightly higher than that of male passengers.
+Top 10 highest fares / Top 10 boletos más caros
 
-💰 ### Top 10 Highest Fares
+Visualizations / Visualizaciones
 
-SELECT Name, Ticket, Fare 
-FROM titanic 
-ORDER BY Fare DESC 
-LIMIT 10;
+Generate graphs with matplotlib & seaborn / Generar gráficos con matplotlib y seaborn
 
-### Insight: The most expensive tickets belonged to first-class passengers, highlighting strong social and economic divisions of the time.
+Save graphs as PNG / Guardar gráficos como PNG
 
+📊 Key Insights / Insights Principales
 
-📈 Visualizations
-### Generated with Matplotlib and Seaborn:
+Most passengers traveled in third class, reflecting a predominance of lower-income individuals.
+La mayoría de los pasajeros viajaban en tercera clase, reflejando predominancia de personas de menores ingresos.
 
-🧠 Key Learnings
-### Connecting Python with PostgreSQL.
+The average age of female passengers was slightly higher than that of male passengers.
+La edad promedio de las mujeres fue ligeramente mayor que la de los hombres.
 
-### Inserting data from pandas into a SQL table.
+The most expensive tickets belonged to first-class passengers, highlighting strong social and economic divisions.
+Los boletos más caros pertenecían a pasajeros de primera clase, mostrando claras diferencias sociales y económicas.
 
-### Running SQL queries directly from Python.
+📈 Visualizations / Visualizaciones
 
-### Visualizing SQL results with Python libraries.
+Passengers per class / Pasajeros por clase
 
-### Structuring and documenting a professional data project.
+Average age by gender / Edad promedio por género
 
-👨‍💻 Author
-Matías Kostiak – Data Engineer
-📍 Ciudad del Este, Paraguay
-📧 Contact: matiaskostiak25@gmail.com
+Top 10 highest fares / Top 10 boletos más caros
+
+(Include PNG screenshots in a folder called /images for better presentation)
+(Incluir capturas PNG en una carpeta /images para mejor presentación)
+
+🧠 Key Learnings / Conocimientos Adquiridos
+
+Connecting Python with PostgreSQL / Conexión entre Python y PostgreSQL
+
+Inserting data from pandas into SQL / Inserción de datos desde pandas a SQL
+
+Running SQL queries directly from Python / Ejecución de consultas SQL desde Python
+
+Visualizing SQL results / Visualización de resultados
+
+Structuring and documenting a professional data project / Estructuración y documentación profesional de un proyecto de datos
